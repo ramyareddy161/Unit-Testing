@@ -1,0 +1,7 @@
+{
+  "test_factorize_number.py::TestFactorizeNumber::test_method_1": true,
+  "test_factorize_number.py::TestFactorizeNumber::test_method_2": true,
+  "test_factorize_number.py::TestFactorizeNumber::test_method_3": true,
+  "test_factorize_number.py::TestFactorizeNumber::test_method_4": true,
+  "test_factorize_number.py::TestFactorizeNumber::test_method_5": true
+}
