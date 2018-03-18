@@ -1,26 +1,16 @@
-import unittest
-from problem16 import *
-
-class TestTopEarners(unittest.TestCase):
-    score = 0
-    def tearDown(self):
-        print('Running Total: ', TestTopEarners.score)
+class TestTopEarners():
+    def __init__(self, top_earners):
+        self.score = 0
+        self.top_earners = top_earners
 
     def test_topearners_method_1(self):
-        self.assertEqual(top_earners())
-        TestTopEarners.score += 2
+        pass
     
     def test_topearners_method_2(self):
-        self.assertEqual(top_earners())
-        TestTopEarners.score += 3
+        pass
 
     def test_topearners_method_3(self):
-        self.assertEqual(top_earners())
-        TestTopEarners.score += 5
+        pass
 
     def test_topearners_method_4(self):
-        self.assertEqual(top_earners())
-        TestTopEarners.score += 5
-
-if __name__ == '__main__':
-    unittest.main()
+        pass
