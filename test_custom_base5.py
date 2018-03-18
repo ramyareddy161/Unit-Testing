@@ -1,58 +1,57 @@
-import unittest
-from problem2 import *
-
-class TestCustomBase5(unittest.TestCase):
-    score = 0
-    def tearDown(self):
-        print('Running Total: ', TestCustomBase5.score)
+class TestCustomBase5():
+    def __init__(self, to_custom_base5, from_custom_base5):
+        self.score = 0
+        self.to_custom_base5 = to_custom_base5
+        self.from_custom_base5 = from_custom_base5
 
     def test_tocustombase5_method_1(self):
-        self.assertEqual(to_custom_base5(0), 'a')
-        TestCustomBase5.score += 2
+        if self.to_custom_base5(0) == 'a':
+            self.score += 2
     
     def test_tocustombase5_method_2(self):
-        self.assertEqual(to_custom_base5(1001), 'bdaab')
-        TestCustomBase5.score += 5
+        if self.to_custom_base5(1001) == 'bdaab':
+            self.score += 5
 
     def test_tocustombase5_method_3(self):
-        self.assertEqual(to_custom_base5(-1001), '-bdaab')
-        TestCustomBase5.score += 5
+        if self.to_custom_base5(-1001) == '-bdaab':
+            self.score += 5
 
     def test_tocustombase5_method_4(self):
-        with self.assertRaises(TypeError):
-            result = to_custom_base5(3.2)
-        TestCustomBase5.score += 3
+        try:
+            self.to_custom_base5(3.2)
+        except TypeError:
+            self.score += 3
+
+    def test_fromcustombase5_method_1(self):
+        if self.from_custom_base5(' bdeab ') == 1101:
+            self.score += 3
+
+    def test_fromcustombase5_method_2(self):
+        if self.from_custom_base5(' -bdeab ') == -1101:
+            self.score += 3
+
+    def test_fromcustombase5_method_3(self):
+        if self.from_custom_base5(' +bdeab ') == 1101:
+            self.score += 3
 
     def test_fromcustombase5_method_4(self):
-        self.assertEqual(from_custom_base5(' bdeab '), 1101)
-        TestCustomBase5.score += 3
+        if self.from_custom_base5('BDeab') == 1101:
+            self.score += 3
 
-    def test_fromcustombase5_method_4(self):
-        self.assertEqual(from_custom_base5(' -bdeab '), -1101)
-        TestCustomBase5.score += 3
+    def test_fromcustombase5_method_5(self):
+        try:
+            self.from_custom_base5('BDhello')
+        except ValueError:
+            self.score += 3
 
-    def test_fromcustombase5_method_4(self):
-        self.assertEqual(from_custom_base5(' +bdeab '), 1101)
-        TestCustomBase5.score += 3
+    def test_fromcustombase5_method_6(self):
+        try:
+            self.from_custom_base5('bde-ab')
+        except ValueError:
+            self.score += 3
 
-    def test_fromcustombase5_method_4(self):
-        self.assertEqual(from_custom_base5('BDeab'), 1101)
-        TestCustomBase5.score += 3
-
-    def test_fromcustombase5_method_4(self):
-        with self.assertRaises(ValueError):
-            result = from_custom_base5('BDhello')
-        TestCustomBase5.score += 3
-
-    def test_fromcustombase5_method_4(self):
-        with self.assertRaises(ValueError):
-            result = from_custom_base5('bde-ab')
-        TestCustomBase5.score += 3
-
-    def test_fromcustombase5_method_4(self):
-        with self.assertRaises(TypeError):
-            result = from_custom_base5(10)
-        TestCustomBase5.score += 2
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_fromcustombase5_method_7(self):
+        try:
+            self.from_custom_base5(10)
+        except TypeError:
+            self.score += 2
