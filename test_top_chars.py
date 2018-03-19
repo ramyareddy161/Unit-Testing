@@ -35,7 +35,7 @@ class TestTopChars():
         	self.score += 6
 
     def get_score(self):
-        self.score
+        return self.score
 
     def test_all(self):
         self.test_topchar_method_1()
