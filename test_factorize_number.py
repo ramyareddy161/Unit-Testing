@@ -1,5 +1,5 @@
 class TestFactorizeNumber():
-    def __init__(self, factorize_number)
+    def __init__(self, factorize_number):
         self.score = 0
         self.factorize_number = factorize_number
 
