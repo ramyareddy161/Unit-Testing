@@ -14,3 +14,12 @@ class TestTopEarners():
 
     def test_topearners_method_4(self):
         pass
+
+    def get_score(self):
+        return self.score
+
+    def test_all(self):
+        self.test_topearners_method_1()
+        self.test_topearners_method_2()
+        self.test_topearners_method_3()
+        self.test_topearners_method_4()

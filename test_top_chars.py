@@ -32,3 +32,14 @@ class TestTopChars():
     def test_topchar_method_6(self):
         if self.top_chars('FFggggeeff', 10) == [('g', 4), ('f', 2), ('e', 2), ('F', 2)]:
         	self.score += 6
+
+    def get_score(self):
+        self.score
+
+    def test_all(self):
+        self.test_topchar_method_1()
+        self.test_topchar_method_2()
+        self.test_topchar_method_3()
+        self.test_topchar_method_4()
+        self.test_topchar_method_5()
+        self.test_topchar_method_6()

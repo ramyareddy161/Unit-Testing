@@ -22,3 +22,13 @@ class TestGetHcf():
     def test_gethcf_method_5(self):
         if self.get_hcf([(2, 1), (11, 3), (19, 2), (7919, 4)], [(2, 2), (7, 1), (19, 1), (2687, 4)]) == [(2, 1), (19, 1)]:
         	self.score += 10
+
+    def get_score(self):
+        return self.score
+
+    def test_all(self):
+        self.test_gethcf_method_1()
+        self.test_gethcf_method_2()
+        self.test_gethcf_method_3()
+        self.test_gethcf_method_4()
+        self.test_gethcf_method_5()

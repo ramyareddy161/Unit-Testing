@@ -26,3 +26,13 @@ class TestFactorizeNumber():
             self.factorize_number(3.2)
         except TypeError:
         	self.score += 5
+
+    def get_score(self):
+        return self.score
+
+    def test_all(self):
+        self.test_method_1()
+        self.test_method_2()
+        self.test_method_3()
+        self.test_method_4()
+        self.test_method_5()

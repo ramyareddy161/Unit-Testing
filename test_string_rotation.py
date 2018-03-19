@@ -22,3 +22,13 @@ class TestStringRotation():
     def test_get_right_rotations_method_5(self):
         if self.get_right_rotations('aeiou', 'aeiou') == 0:
         	self.score += 4
+
+    def get_score(self):
+        return self.score
+
+    def test_all(self):
+        self.test_get_right_rotations_method_1()
+        self.test_get_right_rotations_method_2()
+        self.test_get_right_rotations_method_3()
+        self.test_get_right_rotations_method_4()
+        self.test_get_right_rotations_method_5()

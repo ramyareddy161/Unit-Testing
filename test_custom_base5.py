@@ -55,3 +55,19 @@ class TestCustomBase5():
             self.from_custom_base5(10)
         except TypeError:
             self.score += 2
+
+    def get_score(self):
+        return self.score
+    
+    def test_all(self):
+        self.test_fromcustombase5_method_1()
+        self.test_fromcustombase5_method_2()
+        self.test_fromcustombase5_method_3()
+        self.test_fromcustombase5_method_4()
+        self.test_fromcustombase5_method_5()
+        self.test_fromcustombase5_method_6()
+        self.test_fromcustombase5_method_7()
+        self.test_tocustombase5_method_1()
+        self.test_tocustombase5_method_2()
+        self.test_tocustombase5_method_3()
+        self.test_tocustombase5_method_4()
