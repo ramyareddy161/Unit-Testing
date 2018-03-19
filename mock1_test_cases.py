@@ -72,20 +72,32 @@ def test_gethcf_method_5():
 
 # !! TOP EARNERS !!
 def test_topearners_method_1():
-    assert (top_earners())
+    try:
+        top_earners('referral1.txt', -1, 10)
+        assert False
+    except ValueError:
+        assert True
     score = 2
 
 def test_topearners_method_2():
-    assert (top_earners())
+    try:
+        top_earners('referral1.txt', 3, -2)
+        assert False
+    except ValueError:
+        assert True
     score = 3
 
 def test_topearners_method_3():
-    assert (top_earners())
+    assert top_earners('referral1.txt', 1, 1) == [('A', 200)]
     score = 5
 
 def test_topearners_method_4():
-    assert (top_earners())
+    assert top_earners('referral1.txt', 2, 2) == [('A', 300), ('B', 200)]
     score = 5
+
+def test_topearners_method_4():
+    assert top_earners('referral1.txt', 3, 10) == [('A', 350), ('B', 300), ('P', 200), ('C', 0), ('Q', 0), ('X', 0), ('Y', 0)]
+    score = 10
 
 # !! CUSTOM BASE 5 !!
 def test_tocustombase5_method_1():
