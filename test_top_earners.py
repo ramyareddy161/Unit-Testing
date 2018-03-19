@@ -1,7 +1,8 @@
+from problem16 import top_earners
+
 class TestTopEarners():
-    def __init__(self, top_earners):
+    def __init__(self):
         self.score = 0
-        self.top_earners = top_earners
 
     def test_topearners_method_1(self):
         pass
