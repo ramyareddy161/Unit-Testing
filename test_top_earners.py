@@ -9,24 +9,37 @@ class TestTopEarners():
             top_earners('referral1.txt', -1, 10)
         except ValueError:
             self.score += 2
+        except:
+            pass
 
     def test_topearner_method2(self):
         try:
             top_earners('referral1.txt', 3, -2)
         except ValueError:
             self.score += 3
+        except:
+            pass
 
     def test_topearners_method_3(self):
-        if top_earners('referral1.txt', 1, 1) == [('A', 200)]:
-            self.score += 5
+        try:
+            if top_earners('referral1.txt', 1, 1) == [('A', 200)]:
+                self.score += 5
+        except:
+            pass
 
     def test_topearners_method_4(self):
-        if top_earners('referral1.txt', 2, 2) == [('A', 300), ('B', 200)]:
-            self.score += 5
+        try:
+            if top_earners('referral1.txt', 2, 2) == [('A', 300), ('B', 200)]:
+                self.score += 5
+        except:
+            pass
 
     def test_topearners_method_5(self):
-        if top_earners('referral1.txt', 3, 10) == [('A', 350), ('B', 300), ('P', 200), ('C', 0), ('Q', 0), ('X', 0), ('Y', 0)]:
-            self.score += 10
+        try"
+            if top_earners('referral1.txt', 3, 10) == [('A', 350), ('B', 300), ('P', 200), ('C', 0), ('Q', 0), ('X', 0), ('Y', 0)]:
+                self.score += 10
+        except:
+            pass
 
     def get_score(self):
         return self.score
