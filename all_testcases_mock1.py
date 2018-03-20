@@ -95,7 +95,7 @@ def test_topearners_method_4():
     assert top_earners('referral1.txt', 2, 2) == [('A', 300), ('B', 200)]
     score = 5
 
-def test_topearners_method_4():
+def test_topearners_method_5():
     assert top_earners('referral1.txt', 3, 10) == [('A', 350), ('B', 300), ('P', 200), ('C', 0), ('Q', 0), ('X', 0), ('Y', 0)]
     score = 10
 
@@ -186,11 +186,11 @@ def test_topchar_method_4():
     assert top_chars('acceeeffff', 2) == [('f', 4), ('e', 3)]
     score = 8
 
-def test_topchar_method_4():
+def test_topchar_method_5():
     assert  top_chars('ccggggeeff', 3) == [('g', 4), ('f', 2), ('e' == 2)]
     score = 8
 
-def test_topchar_method_4():
+def test_topchar_method_6():
     assert top_chars('FFggggeeff', 10) == [('g', 4), ('f', 2), ('e', 2), ('F', 2)]
     score = 6
 
