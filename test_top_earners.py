@@ -35,7 +35,7 @@ class TestTopEarners():
             pass
 
     def test_topearners_method_5(self):
-        try"
+        try:
             if top_earners('referral1.txt', 3, 10) == [('A', 350), ('B', 300), ('P', 200), ('C', 0), ('Q', 0), ('X', 0), ('Y', 0)]:
                 self.score += 10
         except:

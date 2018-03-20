@@ -26,4 +26,4 @@ if __name__ == '__main__':
             total = sum(scores)
             scores = ','.join(list(map(str, scores)))
             f.write(','.join([student, scores]) + ',' + str(total) + '\n')
-    print('Done')
+    print('DONE')
