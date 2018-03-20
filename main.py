@@ -2,6 +2,11 @@ import os
 import get_current_scores
 import file_io
 
+def print_file(file):
+    with open(file) as f:
+        for line in f.readlines():
+            print(line)
+
 if __name__ == '__main__':
     current_dir = r'C:\Users\Sreekar Mouli\Documents\Programs\Python programs\Unit Testing'
     submissions_dir = r'C:\Users\Sreekar Mouli\Desktop\Submissions'
